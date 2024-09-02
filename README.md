@@ -66,3 +66,12 @@ Sub EjecutarComandoSistema()
     Shell comando, vbNormalFocus
 End Sub
 
+## Exención de Responsabilidad
+
+La información y los archivos adjuntos proporcionados en este repositorio se ofrecen únicamente con fines educativos y de prueba. **No asumo ninguna responsabilidad por el uso indebido o malintencionado de los contenidos aquí presentes**. Los scripts y ejemplos de código son ilustrativos y deben ser utilizados únicamente en entornos controlados y seguros.
+
+**Advertencia:** La ejecución de macros o scripts incrustados en documentos puede presentar riesgos de seguridad. Se recomienda encarecidamente no utilizar estos ejemplos en entornos de producción o en sistemas que contengan información sensible.
+
+El uso de este material es bajo tu propio riesgo. No se proporciona garantía alguna sobre la precisión, seguridad o idoneidad de los contenidos para cualquier propósito específico. **Al utilizar este repositorio, aceptas que no me hago responsable de ninguna consecuencia, daño o pérdida que pueda resultar del uso de la información y archivos aquí compartidos**.
+
+

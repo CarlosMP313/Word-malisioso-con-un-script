@@ -65,7 +65,7 @@ Sub EjecutarComandoSistema()
     comando = "calc.exe"
     Shell comando, vbNormalFocus
 End Sub
-
+```
 ## Exención de Responsabilidad
 
 La información y los archivos adjuntos proporcionados en este repositorio se ofrecen únicamente con fines educativos y de prueba. **No asumo ninguna responsabilidad por el uso indebido o malintencionado de los contenidos aquí presentes**. Los scripts y ejemplos de código son ilustrativos y deben ser utilizados únicamente en entornos controlados y seguros.

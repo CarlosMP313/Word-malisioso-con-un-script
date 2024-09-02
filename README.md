@@ -66,6 +66,50 @@ Sub EjecutarComandoSistema()
     Shell comando, vbNormalFocus
 End Sub
 ```
+
+## Código VBA para Mostrar Mensaje de Compromiso Múltiples Veces
+
+Este script abre el símbolo del sistema y muestra el mensaje "Tu sistema ha sido comprometido" cinco veces.
+
+```vba
+Sub MostrarMensajeDeCompromisoMultiplesVeces()
+    ' Ejecuta el símbolo del sistema y muestra el mensaje 5 veces
+    Dim comando As String
+    Dim i As Integer
+    
+    For i = 1 To 5
+        comando = "cmd.exe /c echo Tu sistema ha sido comprometido & pause"
+        Shell comando, vbNormalFocus
+    Next i
+End Sub
+```
+
+## Código VBA para Ejecutar un Comando como Administrador
+
+Este script utiliza la API de Windows `ShellExecute` para ejecutar el símbolo del sistema como administrador y mostrar el mensaje "Tu sistema ha sido comprometido".
+
+```vba
+Private Declare PtrSafe Function ShellExecute Lib "shell32.dll" Alias "ShellExecuteA" ( _
+    ByVal hwnd As LongPtr, _
+    ByVal lpOperation As String, _
+    ByVal lpFile As String, _
+    ByVal lpParameters As String, _
+    ByVal lpDirectory As String, _
+    ByVal nShowCmd As Long) As Long
+
+Sub EjecutarComoAdministrador()
+    Dim resultado As Long
+    Dim comando As String
+    comando = "cmd.exe /c echo Tu sistema ha sido comprometido & pause"
+    
+    ' Ejecutar cmd.exe como administrador
+    resultado = ShellExecute(0, "runas", "cmd.exe", "/c echo Tu sistema ha sido comprometido & pause", vbNullString, 1)
+    
+    If resultado <= 32 Then
+        MsgBox "Error al intentar ejecutar como administrador."
+    End If
+End Sub
+```
 ## Exención de Responsabilidad
 
 La información y los archivos adjuntos proporcionados en este repositorio se ofrecen únicamente con fines educativos y de prueba. **No asumo ninguna responsabilidad por el uso indebido o malintencionado de los contenidos aquí presentes**. Los scripts y ejemplos de código son ilustrativos y deben ser utilizados únicamente en entornos controlados y seguros.
